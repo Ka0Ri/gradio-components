@@ -12,3 +12,14 @@ It turns out that the gradio.Interface class can actually handle 4 different kin
 4. **Unified demos**: which have both input and output components, but the input and output components are the same. This means that the output produced overrides the input.
 
 <img src=assets\interfaces4.png  />
+
+# Blocks
+
+## Event Listeners and Interactivity
+
+- any Component that acts as an input to an event listener is made interactive. However, since Textbox output acts only as an output, Gradio determines that it should not be made interactive
+-  If a component is constructed with a default value, then it is presumed to be displaying content and is rendered non-interactive. Otherwise, it is rendered interactive.
+
+## Updating Component Configurations
+
+- Any arguments we do not set will use their previous values.
