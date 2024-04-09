@@ -7,9 +7,9 @@ requires = [
 build-backend = "hatchling.build"
 
 [project]
-name = "gradio_mycomponent"
+name = "gradio_firstcomponent"
 version = "0.0.1"
-description = "practice custom component"
+description = "2nd for dev"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.8"
@@ -36,7 +36,7 @@ classifiers = [
 dev = ["build", "twine"]
 
 [tool.hatch.build]
-artifacts = ["/backend/gradio_mycomponent/templates", "*.pyi", "\\backend\\gradio_mycomponent\\templates"]
+artifacts = ["/backend/gradio_firstcomponent/templates", "*.pyi"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["/backend/gradio_mycomponent"]
+packages = ["/backend/gradio_firstcomponent"]

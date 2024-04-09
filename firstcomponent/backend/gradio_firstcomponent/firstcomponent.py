@@ -6,7 +6,7 @@ from gradio.components.base import FormComponent
 from gradio.events import Events
 
 
-class MyComponent(FormComponent):
+class firstComponent(FormComponent):
     """
     Creates a very simple textbox for user to enter string input or display string output.
     """
