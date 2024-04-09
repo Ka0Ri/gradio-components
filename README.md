@@ -23,3 +23,15 @@ It turns out that the gradio.Interface class can actually handle 4 different kin
 ## Updating Component Configurations
 
 - Any arguments we do not set will use their previous values.
+
+# Adding Custom Components
+
+## Adding Custom CSS
+- For additional styling ability, you can pass any CSS to your app using the css= kwarg. You can either the filepath to a CSS file, or a string of CSS code.
+
+## Adding custom JavaScript to your demo
+There are 3 ways to add javascript code to your Gradio demo:
+
+1. You can add JavaScript code as a string or as a filepath to the js parameter of the Blocks or Interface initializer. This will run the JavaScript code when the demo is first loaded.
+2. Events have a js argument that can take a JavaScript function as a string and treat it just like a Python event listener function
+3. Lastly, you can add JavaScript code to the head param of the Blocks initializer. This will add the code to the head of the HTML document.
