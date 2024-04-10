@@ -44,3 +44,29 @@ The Custom Components workflow consists of 4 steps: create, dev, build, and publ
 2. **dev**: launches a development server with a sample app & hot reloading allowing you to easily develop your custom component
 3. **build**: builds a python package containing to your custom component’s Python and JavaScript code — this makes things official!
 4. **publish**: uploads your package to PyPi and/or a sample app to HuggingFace Spaces.
+
+### Interactive vs Static
+- Gradio will use the interactive version (if available) of a component if that component is used as the input to any event; otherwise, the static version will be used.
+- When you design custom components, you must accept the boolean interactive keyword in the constructor of your Python class. In the frontend, you may accept the interactive property, a bool which represents whether the component should be static or interactive.
+
+### The value and how it is preprocessed/postprocessed
+
+- The most important attribute of a component is its value.
+- The value that is typically set by the user in the frontend (if the component is interactive) or displayed to the user (if it is static)
+- it is also this value that is sent to the backend function when a user triggers an event
+
+Each component does two conversions:
+
+- **preprocess**: Converts the value from the format sent by the frontend to the format expected by the python function. This usually involves going from a web-friendly JSON structure to a python-native data structure, like a numpy array or PIL image. The Audio, Image components are good examples of preprocess methods.
+- **postprocess**: Converts the value returned by the python function to the format expected by the frontend. This usually involves going from a python-native data-structure, like a PIL image to a JSON structure.
+
+`Every component must implement preprocess and postprocess methods. In the rare event that no conversion needs to happen, simply return the value as-is. Textbox and Number are examples of this.`
+
+`As a component author, YOU control the format of the data displayed in the frontend as well as the format of the data someone using your component will receive`
+
+### The “Example Version” of a Component
+
+To enable the example view, you must have the following two files in the top of the frontend directory:
+
+- Example.svelte: this corresponds to the “example version” of your component
+- Index.svelte: this corresponds to the “regular version”
