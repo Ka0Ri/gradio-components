@@ -1,4 +1,4 @@
 
-from .pdf2 import pdf2
+from .pdf2 import PDF2
 
-__all__ = ['pdf2']
+__all__ = ['PDF2']

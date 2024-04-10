@@ -6,5 +6,5 @@ A Custom Gradio component.
 
 ```python
 import gradio as gr
-from gradio_pdf2 import pdf2
+from gradio_pdf2 import PDF2
 ```

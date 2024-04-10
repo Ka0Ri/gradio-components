@@ -1,6 +1,6 @@
 {
   "name": "gradio_pdf2",
-  "version": "0.2.14",
+  "version": "0.2.0",
   "description": "Gradio UI packages",
   "type": "module",
   "author": "",
@@ -13,13 +13,13 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
-    "@gradio/atoms": "0.6.2",
-    "@gradio/button": "^0.2.30",
-    "@gradio/client": "^0.15.1",
-    "@gradio/icons": "^0.3.4",
-    "@gradio/statustracker": "0.4.11",
-    "@gradio/upload": "^0.8.4",
-    "@gradio/utils": "0.3.1"
+    "@gradio/atoms": "^0.2.0",
+    "@gradio/button": "^0.2.3",
+    "@gradio/client": "^0.7.1",
+    "@gradio/icons": "^0.2.0",
+    "@gradio/statustracker": "^0.3.0",
+    "@gradio/upload": "^0.3.2",
+    "@gradio/utils": "^0.2.0"
   },
   "devDependencies": {
     "pdfjs-dist": "^3.11.174"

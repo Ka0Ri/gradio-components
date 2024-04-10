@@ -1,7 +1,7 @@
 from gradio.components.base import Component
 
 
-class pdf2(Component):
+class PDF2(Component):
     def preprocess(self, payload):
         """
         This docstring is used to generate the docs for this custom component.
