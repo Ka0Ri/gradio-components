@@ -7,14 +7,14 @@ requires = [
 build-backend = "hatchling.build"
 
 [project]
-name = "gradio_mycomponent"
+name = "gradio_pdf2"
 version = "0.0.1"
-description = "dev on wsl"
+description = "duplicate"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.8"
 authors = [{ name = "YOUR NAME", email = "YOUREMAIL@domain.com" }]
-keywords = ["gradio-custom-component", "gradio-template-SimpleTextbox"]
+keywords = ["gradio-custom-component", "gradio-template-Fallback"]
 # Add dependencies here
 dependencies = ["gradio>=4.0,<5.0"]
 classifiers = [
@@ -36,7 +36,7 @@ classifiers = [
 dev = ["build", "twine"]
 
 [tool.hatch.build]
-artifacts = ["/backend/gradio_mycomponent/templates", "*.pyi"]
+artifacts = ["/backend/gradio_pdf2/templates", "*.pyi"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["/backend/gradio_mycomponent"]
+packages = ["/backend/gradio_pdf2"]

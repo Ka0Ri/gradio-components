@@ -1,10 +1,10 @@
 
-# gradio_mycomponent
+# gradio_pdf2
 A Custom Gradio component.
 
 ## Example usage
 
 ```python
 import gradio as gr
-from gradio_mycomponent import MyComponent
+from gradio_pdf2 import pdf2
 ```
