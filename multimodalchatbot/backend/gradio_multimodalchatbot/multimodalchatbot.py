@@ -14,7 +14,6 @@ from gradio.components.base import Component
 from gradio.data_classes import FileData, GradioModel, GradioRootModel
 from gradio.events import Events
 
-
 class FileMessage(GradioModel):
     file: FileData
     alt_text: Optional[str] = None
